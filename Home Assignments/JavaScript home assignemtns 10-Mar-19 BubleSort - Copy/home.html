@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Assignment Sorting </title>
+
+</head>
+
+<body>
+    <script>
+        var arr = [];        
+        var i = 0;
+        var temp = 0;
+        // loop to input Array Elements 
+        while ((temp = prompt("Add New Element to Array (Enter Empty to Stop)  :")) != "") {
+            arr.push(temp);
+        }
+        document.write("Array before Sort : " + arr);
+        
+        // call function  to sort 
+        document.write("<br>Array After Sort : " + mysort(arr));
+        
+
+        // Function for sorting 
+        function mysort(ary) {
+            for (var i = 0; i < ary.length; i++) {
+                for (var j = 0; j < ary.length - i; j++) {
+                    if (isNaN(Number(ary[j]))) { // for Non numeric Elements 
+                        if (ary[j + 1] < ary[j]) {
+                            temp = ary[j + 1];
+                            ary[j + 1] = ary[j];
+                            ary[j] = temp;
+                        }
+                    }                
+                    else { // for numeric elements
+                        if (Number(ary[j + 1]) < Number(ary[j])) {
+                            temp = ary[j + 1];
+                            ary[j + 1] = ary[j];
+                            ary[j] = temp;
+                        }
+                    }
+                }
+            }
+            return ary;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Assignment Number to Words figures</title>
+
+</head>
+
+<body>
+    <script>
+        var words10 = [" ", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
+            "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Ninteen", "Twenty"];
+        var words99 = ["Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety", "Hundred", "Thousand"];
+        var digits = [];
+        var numstr = prompt("Enter a Number  : ", "");
+        var finalFigure = "";
+        for (var i = 0; i < numstr.length; i++) {
+            digits[i] = numstr[i];
+        }
+
+        var numval = parseInt(digits.join(""));
+        if(numval < 0)
+        {
+            digits.splice(0, 1);
+            finalFigure += "Minus ";
+        }
+        if (numval == 0) {
+            finalFigure += "Zero";
+        }
+        else {
+            for (var i = 0; digits.length > 0; i++) {
+                if (digits.length <= 2) {
+                    numval = parseInt(digits.join(""));
+                    if (numval <= 20) {
+                        finalFigure += " " + words10[numval];
+                        break;
+                    }
+                    else if (numval > 20) {
+                        if (digits[0] != "0") {
+                            finalFigure += " " + words99[(Number(digits[0]) - 2)];
+                        }
+                        digits.splice(0, 1);
+                    }
+                } else if (digits.length == 3) {
+                    if (digits[0] != "0") {
+                        finalFigure += " " + words10[Number(digits[0])] + " " + words99[8];
+                    }
+                    digits.splice(0, 1);
+                }
+                else if (digits.length == 4) {
+                    if (digits[0] != "0") {
+                        finalFigure += " " + words10[Number(digits[0])] + " " + words99[9];
+                    }
+                    digits.splice(0, 1);
+                }
+            }
+        }
+        alert(finalFigure);
+    </script>
+</body>
+
+</html>

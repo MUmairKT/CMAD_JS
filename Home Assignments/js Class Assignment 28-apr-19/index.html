@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Assignment 28-Apr-2019 </title>
+    <style>
+        .blueRowColor td{
+            background-color: lightblue;
+        }
+        .whiteRowColor td{
+            background-color: white;
+        }
+        .btnalign{            
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="javascript:void(0)">
+        <br>
+        <table>
+            <tr>
+                <td>Student Name :</td>
+                <td><input type="text" placeholder="Enter Name" id="stdname"></td>
+            </tr>
+            <tr>
+                <td>Class :</td>
+                <td><input type="text" placeholder="Enter Class" id="stdclass"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button"
+                        onclick="addrec(document.getElementById('stdname'),document.getElementById('stdclass')); "
+                        value="Add Row" id="btnAddRow" class ="btnalign">
+                </td>                       
+            </tr>
+        </table>
+        <br>
+        <table border="1" width="500px">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tblStdRecord">
+
+            </tbody>
+
+        </table>
+    </form>
+
+    <script src="jsfile.js"></script>
+</body>
+
+</html>

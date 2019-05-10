@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Assignment 28-Apr-2019 </title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <style>
+        .jumbotron {
+            background-color: lightblue;
+        }
+
+        fieldset {
+            border: 1px solid lightblue;
+            padding: 10px;
+        }
+
+        legend {
+            padding: 10px;
+            width: inherit;
+        }
+        .rightAlign{
+            text-align: right;
+        }
+        .lightblue{
+            border-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="javascript:void(0)">
+            <div class="col-md-12 text-center mt-4 mb-4 ">
+                <h2>
+                    Ecryption Decryption
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-2 ">
+                    <label for="enType">Select Type</label>
+                    <select class="form-control lightblue" oninput="clearFields(['eMsg','enc','dMsg','dnc'])" id="enType">
+                        <option value="1">Dictionary</option>
+                        <option value="2">Custom</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <fieldset>
+                        <legend>Encryption</legend>
+                        <div class="form-group">
+                            <label for="enMsg">Input Message</label>
+                            <input type="text" placeholder="Message to Encrypt" class="form-control" id="eMsg">
+                        </div>
+                        <div class="form-group">
+                            <label for="enMsg">Output Message</label>
+                            <input type="text" placeholder="Output Encrypted Message" class="form-control" id="enc">
+                        </div>
+                        <div class="form-group rightAlign">
+                            <input type="button" id="btnEn"
+                                onclick="callEncrypt('eMsg','enc',document.getElementById('enType').value,'btnEn')"
+                                value="Encrypt" class="btn btn-info btn-sm">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-6 mt-5">
+                    <fieldset>
+                        <legend>Decryption</legend>
+                        <div class="form-group">
+                            <label for="enMsg">Input Message</label>
+                            <input type="text" placeholder="Enter to Decrypt" class="form-control" id="dMsg">
+                        </div>
+                        <div class="form-group">
+                            <label for="enMsg">Output Message</label>
+                            <input type="text" placeholder="Output Decrypted Message" class="form-control" id="dnc">
+                        </div>
+                        <div class="form-group rightAlign">
+                            <input type="button" id="btnDe"
+                                onclick="callEncrypt('dMsg','dnc',document.getElementById('enType').value,'btnDe')"
+                                value="Decrypt" class="btn btn-info btn-sm">
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+            <br>
+        </form>
+    </div>
+    <script src="jsfile.js"></script>
+    <script src="jquery.js"></script>
+</body>
+
+</html>

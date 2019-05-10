@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Assignment MarkSheet</title>
+
+</head>
+
+<body>
+    <script>
+        var stdname, grade = "";
+        var english, math, computer, physics, urdu = 0;
+        var obtmarks, percentage = 0;
+        var totalmarks = 500;
+        stdname = prompt("Enter Student Name :");
+        english = Number(prompt("Enter marks for English : ", "0"));
+        math = Number(prompt("Enter marks for Math : ", "0"));
+        computer = Number(prompt("Enter marks for Computer : ", "0"));
+        physics = Number(prompt("Enter marks for Physics : ", "0"));
+        urdu = Number(prompt("Enter marks for Urdu : ", "0"));
+        obtmarks = english + math + computer + physics + urdu;
+        percentage = obtmarks / totalmarks * 100;
+        percentage = (percentage).toFixed(2);
+        document.writeln("Mark Sheet");
+        document.writeln("<br>------------");
+        document.writeln("<br><br>Name         :   " + stdname);
+        document.writeln("<br><br>English      :   " + english);
+        document.writeln("<br><br>Math         :   " + math);
+        document.writeln("<br><br>Urdu         :   " + urdu);
+        document.writeln("<br><br>Physics      :   " + physics);
+        document.writeln("<br><br>Computer     :   " + computer);
+        document.writeln("<br><br>Marks Obtain :   " + obtmarks + " Out of " + totalmarks);
+        document.writeln("<br><br>Percentage   :   " + percentage + "%");
+
+        if (percentage > 100)
+            grade = "Invalid";
+        else if (percentage >= 80)
+            grade = "A+";
+        else if (percentage >= 70)
+            grade = "A";
+        else if (percentage >= 60)
+            grade = "B";
+        else if (percentage >= 50)
+            grade = "C";
+        else if (percentage >= 40)
+            grade = "D";
+        else if (percentage >= 33)
+            grade = "E";
+        else if (percentage < 33)
+            grade = "F";
+        document.writeln("<br><br>Grade        :   " + grade);
+    </script>
+    <div>
+    </div>
+</body>
+
+</html>

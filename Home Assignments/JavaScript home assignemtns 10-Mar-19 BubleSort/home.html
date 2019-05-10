@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Assignment Sorting </title>
+
+</head>
+
+<body>
+    <script>
+        var arr = [];        
+        var i = 0;
+        var temp = 0;
+        // loop to input Array Elements 
+        while ((temp = prompt("Add New Element to Array (Enter Empty to Stop)  :")) != "") {
+            arr.push(temp);
+        }
+        document.write("Array before Sort : " + arr);
+        arr.push("Me");  // Add new elements at the end of array
+        arr.pop(); // Remove one element from the end of ary
+        arr.shift(); //remove one elements from the beining of arry
+        arr.unshift(); // add one or more elements to begining of ary
+        arr.splice(0,1,"You"); // add or remove elements anywhere in the ary 
+        arr.slice(0,2); // copy arrry by returning copy of elements giving 
+        arr.indexOf("Me");
+        arr.lastIndexOf("Me");
+        arr.charAt(0);
+        temp.charAt(0);
+        var num = 5.216;
+        Math.round(num);
+        Math.ceil(num);
+        Math.floor(num);
+        num = Math.random();  // 16 decimal place number 
+        parseInt(num);
+        parseFloat(num);
+        Number(num);        
+        num.toString();
+        num.toFixed(2);
+        var mydate = new Date();
+        mydate.getDay();
+        mydate.setDate(20);
+
+
+
+        // call function  to sort 
+        document.write("<br>Array After Sort : " + mysort(arr));
+        
+
+        // Function for sorting 
+        function mysort(ary) {
+            for (var i = 0; i < ary.length; i++) {
+                for (var j = 0; j < ary.length - i; j++) {
+                    if (isNaN(Number(ary[j]))) { // for Non numeric Elements 
+                        if (ary[j + 1] < ary[j]) {
+                            temp = ary[j + 1];
+                            ary[j + 1] = ary[j];
+                            ary[j] = temp;
+                        }
+                    }                
+                    else { // for numeric elements
+                        if (Number(ary[j + 1]) < Number(ary[j])) {
+                            temp = ary[j + 1];
+                            ary[j + 1] = ary[j];
+                            ary[j] = temp;
+                        }
+                    }
+                }
+            }
+            return ary;
+        }
+    </script>
+</body>
+
+</html>
