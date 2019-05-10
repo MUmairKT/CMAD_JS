@@ -11,6 +11,7 @@ var dictionaryMethod = {
   // encryption by replacing each alphabet with its selected replacment character from encryption properties
   dictEncrypt: function (inputstr) {
     var tempstr = [];
+    inputstr = inputstr.toLowerCase();
     for (var i = 0; i < inputstr.length; i++) {
       if ("e" + inputstr[i].replace(' ', '') in dictionaryMethod) {
         tempstr.push(dictionaryMethod["e" + inputstr[i].replace(' ', '')]);
@@ -21,6 +22,7 @@ var dictionaryMethod = {
   // decryption by replacing each alphabet with its selected replacment character from decryption properties 
   dictDecrypt: function (inputstr) {
     var tempstr = [];
+    inputstr = inputstr.toLowerCase();
     for (var i = 0; i < inputstr.length; i++) {
       if ("d" + inputstr[i].replace(' ', '') in dictionaryMethod) {
         tempstr.push(dictionaryMethod["d" + inputstr[i].replace(' ', '')]);
@@ -73,8 +75,6 @@ var CustomMethod = {
     return tempstr.join(""); // return the final array as string
   }
 };
-
-
 
 //  calling functions from button onclick
 var callEncrypt = function (inputid, outputid, Encryptype, btnid) {
