@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Record</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+</head>
+
+<body>
+    <div class="container ">
+        <form action="javascript:void(0)">
+            <form action="javascript:void(0)" class="">
+                <div class="col-md-12 text-center mt-4 mb-4">
+                    <h1>Add New Record </h1>
+                </div>
+                <div class="Row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="stdName">Name</label>
+                            <input type="text" placeholder="Enter Name" class="form-control" id="stdName">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="stdAge">Age</label>
+                            <input type="number" placeholder="Enter Age" class="form-control" id="stdAge">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="stdCell">Cell</label>
+                            <input type="text" placeholder="Enter cell" class="form-control" id="stdCell">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="stdEmail">E-mail</label>
+                            <input type="email" placeholder="Enter email" class="form-control" id="stdEmail">
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="stdimg">Upload Image</label>
+                            <input type="" placeholder="Enter cell" class="form-control" id="stdimg">
+                        </div>
+                    </div> -->
+                    <div class="col-md-12 text-center">
+                        <div class="form-group">
+                            <input type="button"
+                                onclick="addrec(document.getElementById('stdName'),document.getElementById('stdAge'),document.getElementById('stdCell'),document.getElementById('stdEmail')); "
+                                value="Add Record" id="btnAddRow" class="btn btn-success ">
+                            <input type="button" onclick="viewRec()" value="View" id="btnView" class="btn btn-success ">
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                    </div>
+                </div>
+            </form>
+    </div>
+    <script src="jsfile.js"></script>
+    <script src="jquery.js"></script>
+</body>
+
+</html>
