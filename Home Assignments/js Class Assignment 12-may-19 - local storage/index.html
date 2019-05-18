@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Assignment 28-Apr-2019 </title>
+    <title>View Record</title>
+    <link rel="stylesheet" href="bootstrap.css" />
     <style>
         .blueRowColor td {
             background-color: lightblue;
@@ -22,24 +23,47 @@
 </head>
 
 <body>
-    <form action="javascript:void(0)">
-        <br>
-        <table border="1" width="500px">
-            <thead>
-                <tr>
-                    <th>Student Name</th>
-                    <th>Class</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="tblStdRecord">
+    <div class="container">
+        <div class="col-md-12 text-center mt-4 mb-1">
+            <h1>Local Storage</h1>
+            <h2>View Records</h2>
+            <div class="text-right">
+                <input type="button" value="Add New Record" class="btn btn-success" onclick="addRecPage()" />
+            </div>
+        </div>
+        <form action="javascript:void(0)">
+            <br>
+            <table border="1" width="500px" class="table text-center table-striped">
+                <thead>
+                    <tr scope="row">
+                        <th scope="col">
+                            <h4>S.No</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Name</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>E-mail</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Edit</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Delete</h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tblStdRecord">
 
-            </tbody>
+                </tbody>
 
-        </table>
-    </form>
+            </table>
+        </form>
+    </div>
 
     <script src="jsfile.js"></script>
+    <script src="jquery.js"></script>
+    <script> viewRec();</script>
 </body>
 
 </html>
