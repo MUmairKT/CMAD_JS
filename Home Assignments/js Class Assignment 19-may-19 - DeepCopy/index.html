@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deep Copy</title>
+</head>
+
+<body>
+    <h2>Deep Copy</h2>
+    <p>
+        obj1 is sample object to be copied to obj2 empty object <br>       
+        open console window and call function deepCopy as follows: <br>                
+        obj2 = deepCopy(obj1);<br>        
+        
+    </p>
+    <script>
+        var obj1 = {
+            ary: ['oldvalue ', 12, 35.5, { nestedAry: ['oldNestAryValue', 34, 43.5] }],
+            strVal: "oldstring",
+            num: 0
+        }
+        var obj2 = {}
+        // obj2 = deepCopy(obj1);
+        function deepCopy(object1) {
+            tempobj = {};
+            localStorage.setItem("obj", JSON.stringify(object1));
+            tempobj = JSON.parse(localStorage.getItem("obj"));
+            localStorage.removeItem("obj")
+            return tempobj;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>open child Window</title>
+</head>
+
+<body>
+    <input type="button" value="Open Another Window" onclick="openwindow('http://www.google.com','w1','800','600')" />
+    <script>
+        // function OpenPopupCenter(pageURL, title, w, h) {
+        //     var left = (screen.width - w) / 2;
+        //     var top = (screen.height - h) / 4;
+        //     var targetWin = window.open(pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        // }
+
+        function openwindow(url, title, width, height) {
+            var left = (screen.width - width) / 2;
+            var top = (screen.height - height) / 4;            
+            //var left = (screen.width / 2) - (width / 2);
+            //var top = (screen.height / 2) - (height / 2);
+            //return window.open(url, title, 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+        }
+
+        // function openwindow() {
+        //     var w = window.open("https://google.com", "w1", "width=420,height=380,left=200,top=100");
+        // }
+
+    </script>
+</body>
+
+</html>

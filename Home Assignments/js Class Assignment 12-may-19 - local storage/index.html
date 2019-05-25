@@ -63,7 +63,11 @@
 
     <script src="jsfile.js"></script>
     <script src="jquery.js"></script>
-    <script> viewRec();</script>
+
+    <script> 
+    viewRec();
+    addrec(document.getElementsByTagName("title")[0].innerHTML,window.URL,new Date().toLocaleString());
+    </script>
 </body>
 
 </html>
